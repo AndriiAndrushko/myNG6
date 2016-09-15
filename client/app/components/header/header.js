@@ -1,22 +1,22 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import aboutComponent from './about.component';
+import headerComponent from './header.component';
 
-let aboutModule = angular.module('about', [
+let aboutModule = angular.module('header', [
   uiRouter
 ])
 
 .config(($stateProvider) => {
   "ngInject";
   $stateProvider
-    .state('about', {
-      url: '/about',
-      component: 'about'
+    .state('header', {
+      url: '/header',
+      component: 'header'
     });
 })
 
-.component('about', aboutComponent)
+.component('header', headerComponent)
   
 .name;
 
-export default aboutModule;
+export default headerModule;

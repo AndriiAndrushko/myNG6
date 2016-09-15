@@ -1,8 +1,11 @@
 <nav class="navbar">
-  <div class="logo">
-    <h1><a ui-sref="home">{{ $ctrl.name }}</a></h1>
-  </div>
-  <div class="nav-links">
-    <span><a ui-sref="about">about</a></span>
+     </div>
+  <div class="container fluid">
+    <div class="col-lg-7">
+      <ul ng-repeat="x in $ctrl.links" class="nav nav-pills">
+      <li role="presentation"  ui-sref={{x.link}}>{{x.name}}</li>
+    </ul>
+    </div>
+   <div class="col-lg-2"> <button class="btn btn-danger"> Log out</button></div>
   </div>
 </nav>

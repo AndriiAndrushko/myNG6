@@ -1,12 +1,12 @@
-import template from './about.html';
-import controller from './about.controller';
-import './about.styl';
+import template from './header.html';
+import controller from './header.controller';
+import './header.styl';
 
-let aboutComponent = {
+let headerComponent = {
   restrict: 'E',
   bindings: {},
   template,
   controller
 };
 
-export default aboutComponent;
+export default headerComponent;

@@ -1,9 +1,9 @@
-import HeaderModule from './header'
+import AboutModule from './about'
 
-describe('Header', () => {
+describe('About', () => {
   let $rootScope, $state, $location, $componentController, $compile;
 
-  beforeEach(window.module(HeaderModule));
+  beforeEach(window.module(AboutModule));
 
   beforeEach(inject(($injector) => {
     $rootScope = $injector.get('$rootScope');
@@ -15,10 +15,10 @@ describe('Header', () => {
 
   describe('Module', () => {
     // top-level specs: i.e., routes, injection, naming
-    it('Header component should be visible when navigates to /header', () => {
-      $location.url('/header');
+    it('About component should be visible when navigates to /about', () => {
+      $location.url('/about');
       $rootScope.$digest();
-      expect($state.current.component).to.eq('header');
+      expect($state.current.component).to.eq('about');
     });
   });
 
@@ -26,7 +26,7 @@ describe('Header', () => {
     // controller specs
     let controller;
     beforeEach(() => {
-      controller = $componentController('header', {
+      controller = $componentController('about', {
         $scope: $rootScope.$new()
       });
     });
@@ -42,12 +42,12 @@ describe('Header', () => {
 
     beforeEach(() => {
       scope = $rootScope.$new();
-      template = $compile('<header></header>')(scope);
+      template = $compile('<about></about>')(scope);
       scope.$apply();
     });
 
     it('has name in template', () => {
-      expect(template.find('h1').html()).to.eq('header');
+      expect(template.find('h1').html()).to.eq('about');
     });
 
   });
